@@ -9,7 +9,8 @@ import chisel3._
 // When 'wen' is asserted, write 'wrData' to memory at 'wrAddr'
 // When 'ren' is asserted, 'rdData' holds the output
 // of reading the memory at 'rdAddr'
-//
+//Problem has been completed
+
 class Memo extends Module {
   val io = IO(new Bundle {
     val wen     = Input(Bool())
@@ -23,6 +24,10 @@ class Memo extends Module {
   val mem = Mem(256, UInt(8.W))
 
   // Implement below ----------
+  when(io.wen){mem(io.wrAddr):=io.wrData}
+
+  io.rdData:=0.U
+  when(io.ren){io.rdData:=mem(io.rdAddr)}
 
   // Implement above ----------
 
