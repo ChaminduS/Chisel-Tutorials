@@ -8,7 +8,8 @@ import chisel3._
 //
 // Counter should be incremented by the 'amt'
 // every clock if 'en' is asserted
-//
+//Problem has been completed
+
 object Counter {
 
   def wrapAround(n: UInt, max: UInt) = 

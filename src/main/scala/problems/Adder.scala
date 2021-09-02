@@ -7,7 +7,8 @@ import chisel3._
 //
 // 'out' should be the sum of 'in0' and 'in1'
 // Adder width should be parametrized
-//
+//Problem has been completed
+
 // Implement below ----------
 class Adder(val w: Int) extends Module {
   val io = IO(new Bundle {
