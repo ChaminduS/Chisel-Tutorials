@@ -18,6 +18,7 @@
 *.swp
 *.out
 /bin/
+/null/
 target
 
 # sbt run folder
