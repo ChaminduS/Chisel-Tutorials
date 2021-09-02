@@ -11,11 +11,12 @@ import chisel3._
 // Implement below ----------
 class Adder(val w: Int) extends Module {
   val io = IO(new Bundle {
-    val in0 = Input(UInt(1.W))
-    val in1 = Input(UInt(1.W))
-    val out = Output(UInt(1.W))
+    val in0 = Input(UInt(w.W))
+    val in1 = Input(UInt(w.W))
+    val out = Output(UInt(w.W))
   })
 
-  io.out := 0.U
+  io.out := io.in0 +io.in1
 }
 // Implement above ----------
+ 
